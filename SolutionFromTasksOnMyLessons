@@ -1,0 +1,70 @@
+*/
+string[] arr = { "flight", "flowers", "fly" };
+string pre = arr[0];
+for (int i = 1; i < arr.Length; i++ )
+{
+    while (arr[i].IndexOf(pre) != 0)
+    {
+        pre = pre.Substring(0, pre.Length - 1);
+        if (pre == "")
+        {
+            Console.WriteLine("\"\" ");
+        }
+    }
+}
+Console.WriteLine(pre);
+//
+string? stroka = Console.ReadLine();
+char bukva;
+string Prestroka = "Slovo: ";
+foreach(char c in stroka)
+{
+    if (char.IsUpper(c))
+    {
+        bukva = Char.ToLower(c);
+        Prestroka = Prestroka + bukva;
+    }
+    else
+    {
+        bukva = Char.ToUpper(c);
+        Prestroka = Prestroka + bukva;
+    }
+}
+Console.WriteLine(Prestroka);
+//
+int c = 0;
+int end = 300;
+int j = 1;
+int n = Convert.ToInt32(Console.ReadLine());
+for (int i = 1; i <= end; i += j)
+ {
+    c++;
+    if(c==n+1 && n != 0)
+    {
+        Console.WriteLine($"Количество способов {i}");
+    }
+    j = i - j;
+}     
+//
+int i = 0;
+string stroka = Console.ReadLine();
+foreach(char c in stroka)
+{
+    if (c == '(' || c == '{' || c == '[')
+    {
+        i++;
+    }
+    if (c == ')' || c == '}' || c == ']')
+    {
+        i--;
+    }
+}
+if(i != 0)
+{
+    Console.WriteLine("а чо это мы не закрытые?");
+}
+else
+{
+    Console.WriteLine("Вот, другое дело, каждой скобке по паре");
+}
+/*
