@@ -1,0 +1,17 @@
+//Summation
+int n = 6;
+int summary (int n)
+{
+    int sn = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        sn += i;
+    }
+    return sn;
+}
+//another way
+int n = 6;
+int summary (int n)
+{
+   return n*(n+1)/2;
+}
